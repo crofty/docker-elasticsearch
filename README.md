@@ -1,7 +1,6 @@
-# Build the image locally
+# docker-elasticsearch
 
-    docker build -t elasticsearch .
-    docker run -p 9200:9200 -v /var/lib/elasticsearch:/var/lib/elasticsearch:rw elasticsearch
+    docker run -p 9200:9200 -v /var/lib/elasticsearch:/var/lib/elasticsearch:rw crofty/elasticsearch
 
 This starts elasticsearch and shares the `/var/lib/elasticsearch` dir between the host and the container so that the data persists across container restarts
 
@@ -18,3 +17,7 @@ This starts elasticsearch and shares the `/var/lib/elasticsearch` dir between th
       },
       "tagline" : "You Know, for Search"
     }
+
+## Build the image locally
+
+    docker build -t crofty/elasticsearch .
